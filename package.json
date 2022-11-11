@@ -5,8 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "init": "mkdir dist",
-    "watch": "rimraf dist/* && copyfiles static/* dist/ && webpack --config webpack.dev.js",
-    "build": "rimraf dist/* && copyfiles static/* dist/ && webpack --config webpack.prod.js",
+    "watch": "rimraf dist/* && copyfiles -u 1 -V \"static/**/*\" dist && webpack --config webpack.dev.js",
+    "build": "rimraf dist/* && copyfiles -u 1 -V \"static/**/*\" dist && webpack --config webpack.prod.js",
     "host": "cd dist && http-server -c-1 --proxy http://localhost:8080?"
   },
   "author": "",
